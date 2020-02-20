@@ -23,7 +23,7 @@ price_validator.check(input_data)
 # проброс доп.параметра
 price_validator.check(input_data, date_format='%Y:%m:%d')
 # добавление валидатора
-price_validator.validators.update({'str': (lambda x: isinstance(x, str), )})
+price_validator.validators.update({'int': (is_int, )})
 ```
 
 ### Запуск тестов:

@@ -36,7 +36,7 @@ class DataValidator:
     Пример использования:
         price_validator = DataValidator(input_schema, validators=validators)
         is_valid = price_validator.check(input_data)
-        price_validator.validators.update({'str': (lambda x: isinstance(x, str), )})
+        price_validator.validators.update({'int': (is_int, )})
     """
 
     def __init__(self, schema: str, validators: Dict[str, Tuple[callable]] = None):
